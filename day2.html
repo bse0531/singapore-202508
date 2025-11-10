@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Day 2</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -13,7 +13,7 @@
 </header>
 
 <nav class="tabbar">
-  <a href="index.html" class="active">Home</a>
+  <a href="index.html">Home</a>
   <a href="gallery.html">Gallery</a>
   <a href="map.html">Map</a>
   <a href="info.html">Info</a>
@@ -22,6 +22,10 @@
 <main class="container">
 
 <section class="day-header">
+  <div class="day-nav">
+    <a class="btn outline" href="day1.html">← Prev</a>
+    <a class="btn" href="day3.html">Next →</a>
+  </div>
   <h1 class="display">Day 2</h1>
   <p class="muted">날짜와 코스를 적어주세요.</p>
 </section>
@@ -38,7 +42,7 @@
 <section class="stack">
   <div class="card">
     <h2>사진</h2>
-    <div class="gallery grid small" data-lightbox>
+    <div class="gallery grid small" id="day2Gallery" data-lightbox>
       <img src="assets/sample1.jpg" alt="">
       <img src="assets/sample2.jpg" alt="">
       <img src="assets/sample3.jpg" alt="">
@@ -46,8 +50,8 @@
   </div>
 
   <div class="card">
-    <h2>짧은 메모</h2>
-    <textarea class="note" placeholder="오늘의 한 줄 소감"></textarea>
+    <h2>오늘의 한 줄 소감</h2>
+    <p class="muted">여기에 한 줄 소감을 적어두세요. (HTML 편집)</p>
   </div>
 </section>
 
@@ -61,7 +65,7 @@
 
 </main>
 <footer class="site-footer">
-  <p>Singapore welcomes you back with its green calm and refreshing charm.</p>
+  <p>GM &amp; SE’s happy Singapore nature trip • 2025‑07‑29 ~ 08‑02</p>
 </footer>
 <script src="app.js"></script>
 </body>

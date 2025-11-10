@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -14,7 +14,7 @@
 
 <nav class="tabbar">
   <a href="index.html">Home</a>
-  <a href="gallery.html" class="active">Gallery</a>
+  <a href="gallery.html">Gallery</a>
   <a href="map.html">Map</a>
   <a href="info.html">Info</a>
 </nav>
@@ -23,14 +23,17 @@
 
 <section>
   <h1 class="display">Gallery</h1>
-  <p class="muted">assets 폴더에 이미지를 넣으면 표시됩니다.</p>
-  <div id="galleryGrid" class="gallery grid" data-lightbox></div>
+  <p class="muted">assets 폴더의 이미지를 표시합니다.</p>
+  <div id="galleryGrid" class="gallery grid" data-lightbox>
+    <img src="assets/sample1.jpg" alt="">
+    <img src="assets/sample2.jpg" alt="">
+    <img src="assets/sample3.jpg" alt="">
+  </div>
 </section>
-<script src="gallery.js"></script>
 
 </main>
 <footer class="site-footer">
-  <p>Singapore welcomes you back with its green calm and refreshing charm.</p>
+  <p>GM &amp; SE’s happy Singapore nature trip • 2025‑07‑29 ~ 08‑02</p>
 </footer>
 <script src="app.js"></script>
 </body>
