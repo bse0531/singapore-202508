@@ -37,6 +37,10 @@ a{color:var(--accent);text-decoration:none}
 .btn.accent{background:var(--accent);color:var(--ink-on-accent)}
 
 .site-footer{padding:28px 12px;color:var(--muted);text-align:center;border-top:1px solid var(--border)}
+.site-footer p{
+  font-size: 0.85rem;   /* 기본보다 약간 작음 */
+  line-height: 1.4;
+}
 
 .hero{padding:24px 0 12px}
 .cta-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px}
