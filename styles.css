@@ -1,116 +1,141 @@
-
 /* Palette (modern dark green + soft accents) */
 :root{
   --bg:#ffffff;
   --fg:#151a16;
   --muted:#6f7a72;
+
   --card:#f6faf7;
+
   --accent:#184d2e;        /* dark green */
   --accent-ink:#e9f3ec;
   --accent-soft:#e8f2ec;   /* pale green for fills */
   --accent-line:#d7e7dc;   /* thin separators */
+
   --orange:#ff9933;        /* subtle orange for markers */
   --border:#ececec;
 }
 
 /* Reset & base */
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter, "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;overflow-x:hidden}
-img{max-width:100%;display:block;border-radius:12px}
-.container{max-width:980px;margin:0 auto;padding:16px}
+html,body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--fg);
+  font-family:Inter, "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  overflow-x:hidden; /* 가로 스크롤 방지 */
+}
+img{max-width:100%; display:block; border-radius:12px}
+.container{max-width:980px; margin:0 auto; padding:16px}
 
 /* Typography */
-.page-title{font-size:clamp(28px,6vw,40px);font-weight:800;letter-spacing:-0.01em;color:var(--accent);margin:8px 0 6px}
-.section-title{font-size:clamp(18px,3.5vw,22px);font-weight:800;color:var(--accent);margin:0 0 10px}
+.page-title{
+  font-size:clamp(28px,6vw,40px);
+  font-weight:800; letter-spacing:-0.01em; color:var(--accent);
+  margin:8px 0 6px;
+}
+.section-title{
+  font-size:clamp(18px,3.5vw,22px);
+  font-weight:800; color:var(--accent);
+  margin:0 0 10px;
+}
 .muted{color:var(--muted)}
 
 /* Header & top nav */
-.site-header{position:sticky;top:0;z-index:50;display:flex;justify-content:center;align-items:center;padding:12px;background:rgba(255,255,255,.8);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border)}
-.brand{font-weight:900;color:var(--accent);text-decoration:none}
+.site-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; justify-content:center; align-items:center;
+  padding:12px;
+  background:rgba(255,255,255,.8);
+  backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.brand{font-weight:900; color:var(--accent); text-decoration:none}
 
-.tabbar{position:sticky;top:52px;z-index:40;display:flex;justify-content:center;align-items:center;gap:18px;padding:10px 12px;background:rgba(255,255,255,.75);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border)}
-.tabbar a{font-weight:800;color:inherit;text-decoration:none;position:relative;padding:6px 2px}
-.tabbar .sep{width:1px;height:16px;background:var(--accent-line);display:inline-block}
-.tabbar a.active::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;width:28px;height:3px;background:var(--accent);border-radius:3px}
+.tabbar{
+  position:sticky; top:52px; z-index:40;
+  display:flex; justify-content:center; align-items:center; gap:18px;
+  padding:10px 12px;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.tabbar a{
+  font-weight:800; color:inherit; text-decoration:none;
+  position:relative; padding:6px 2px;
+}
+.tabbar .sep{width:1px; height:16px; background:var(--accent-line); display:inline-block}
+.tabbar a.active::after{
+  content:""; position:absolute; left:50%; transform:translateX(-50%);
+  bottom:-8px; width:28px; height:3px; background:var(--accent); border-radius:3px;
+}
+.tabbar .disabled{opacity:.4; pointer-events:none}
 
-/* Full-bleed hero (fixed version) */
+/* Full-bleed hero (문구 없음, 다음 이미지 안 보이게) */
 .hero-visual{
   position:relative;
-  /* full-bleed: ignore container padding */
-  margin-inline: calc(50% - 50vw);
-  width:100vw;
-  height:46vh;           /* 필요하면 50vh~60vh로 조절 */
-  max-height:480px;
-  overflow:hidden;
+  width:100vw;                /* 컨테이너 폭과 무관하게 화면 전체 */
+  margin-left:50%; transform:translateX(-50%); /* 좌우 여백 제거 */
+  height:46vh; max-height:480px;
+  overflow:hidden;            /* 다음 이미지가 살짝 보이지 않도록 */
 }
-
 .hero-track{
-  display:flex;
-  width:300%;
-  height:100%;
-  will-change: transform;
-  animation: heroSlide 18s infinite cubic-bezier(.3,0,.2,1);
+  display:flex; height:100%;
+  /* 각 이미지가 정확히 화면 너비를 차지하도록 % 대신 vw 기준 */
+  animation:heroSlide 18s infinite cubic-bezier(.3,.0,.2,1);
 }
-
-/* 각 슬라이드는 트랙 대비 1/3씩 차지 (33.3333%) */
 .hero-track img{
-  flex:0 0 33.3333%;
-  width:33.3333%;
-  height:100%;
-  object-fit:cover;
+  flex:0 0 100vw;             /* 각 프레임 = 정확히 100vw */
+  height:100%; object-fit:cover;
   border-radius:0;
-  /* Ken Burns (줌) – 각 프레임에 딜레이를 달아 자연스럽게 이어짐 */
-  animation: kenburns 6s ease-in-out infinite;
+  animation:kenburns 6s infinite ease-in-out;
 }
 
-.hero-track img:nth-child(1){ animation-delay: 0s; }
-.hero-track img:nth-child(2){ animation-delay: 6s; }
-.hero-track img:nth-child(3){ animation-delay:12s; }
-
-/* 트랙 이동은 트랙 기준 비율로 (-33.3333%) */
+/* 슬라이드: 0 -> -100vw -> -200vw */
 @keyframes heroSlide{
-  0%, 30%   { transform: translateX(0%); }
-  35%, 65%  { transform: translateX(-33.3333%); }
-  70%, 100% { transform: translateX(-66.6667%); }
+  0%,30%   { transform:translateX(0) }
+  35%,65%  { transform:translateX(-100vw) }
+  70%,100% { transform:translateX(-200vw) }
 }
-
-/* Ken Burns는 프레임 단위로 살짝 확대되는 연출 */
+/* Ken Burns: 부드러운 확대 (줄어들었다 늘어나는 깜빡임 방지) */
 @keyframes kenburns{
-  0%   { transform: scale(1.04); }
-  100% { transform: scale(1.12); }
+  0%   { transform:scale(1.04) }
+  100% { transform:scale(1.12) }
 }
-
 
 /* Sections */
 .section{margin-top:18px}
-.day-list{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.day-list a{display:block;text-align:center;padding:12px;border:1px solid var(--accent-line);border-radius:12px;background:var(--accent-soft);color:var(--accent);font-weight:800;text-decoration:none}
+
+/* Day by Day (심플 텍스트) */
+.day-list{
+  list-style:none; padding:0; margin:8px 0 0;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+}
+.day-list a{
+  display:block; text-align:center; padding:12px;
+  border:1px solid var(--accent-line); border-radius:12px;
+  background:var(--accent-soft); color:var(--accent);
+  font-weight:800; text-decoration:none;
+}
+
+
 
 /* Cards & stacks */
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;margin:14px 0;color:inherit}
-.stack{display:grid;gap:12px}
+.card{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:14px; margin:14px 0; color:inherit;
+}
+.stack{display:grid; gap:12px}
 
-/* Day nav arrows (minimal) */
-.day-nav{display:flex;justify-content:space-between;align-items:center;margin:4px 0 10px}
-.day-nav .arrow{font-size:1.2rem;color:var(--accent);text-decoration:none;padding:6px 10px;border-radius:10px;border:1px solid var(--accent-line);background:var(--accent-soft)}
-
-/* Timeline */
-.timeline-list{list-style:none;margin:0;padding-left:14px;border-left:2px dashed var(--accent-line)}
-.timeline-list li{margin:12px 0;position:relative;padding-left:8px}
-.timeline-list .time{font-weight:800;margin-left:6px;display:inline-block}
-.timeline-list li::before{content:"";position:absolute;left:-6px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--orange)}
-
-/* Galleries */
-.gallery.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-
-/* Key-value styling */
-.kv{list-style:none;padding:0;margin:0;display:grid;gap:6px}
-.kv li{display:flex;justify-content:space-between;padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:#fff}
+/* Key-value styling for Info */
+.kv{list-style:none; padding:0; margin:0; display:grid; gap:6px}
+.kv li{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 10px; border:1px solid var(--border); border-radius:10px; background:#fff;
+}
 .kv li span{color:var(--muted)}
 
-/* Map */
-.mapbox{height:60vh;border:1px solid var(--border);border-radius:12px}
-
 /* Footer */
-.site-footer{padding:22px 12px;color:var(--muted);text-align:center;border-top:1px solid var(--border)}
+.site-footer{
+  padding:22px 12px; color:var(--muted);
+  text-align:center; border-top:1px solid var(--border)
+}
 .site-footer p{font-size:.9rem}
