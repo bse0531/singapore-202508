@@ -32,10 +32,6 @@ img{max-width:100%;display:block}
 }
 @keyframes heroZoom{0%{transform:scale(1.05)}50%{transform:scale(1.1)}100%{transform:scale(1.05)}}
 
-/* Menu tiles on Home */
-.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 6px}
-.menu-tile{display:flex;align-items:center;justify-content:center;background:#f6faf7;border:1px solid #ececec;border-radius:12px;padding:12px;text-decoration:none;color:#1f5a33;font-weight:800}
-.menu-tile:active{transform:scale(.98)}
 
 /* Cards & grid */
 .cards h2{margin:18px 0 8px}
@@ -61,3 +57,44 @@ img{max-width:100%;display:block}
 /* Footer */
 .site-footer{padding:22px 12px;color:#6f7a72;text-align:center;border-top:1px solid #ececec}
 .site-footer p{font-size:.9rem}
+
+/* Hero full bleed */
+.hero-full {
+  width: 100vw;
+  height: 55vh;
+  max-height: 520px;
+  overflow: hidden;
+  position: relative;
+  margin: 0; /* 여백 제거 */
+}
+
+.hero-full .hero-track {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: heroSlide 18s infinite;
+}
+
+.hero-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 6s infinite;
+  filter: brightness(0.9);
+}
+
+@keyframes heroSlide {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(0);}
+  40% {transform: translateX(-100%);}
+  66% {transform: translateX(-100%);}
+  73% {transform: translateX(-200%);}
+  100% {transform: translateX(-200%);}
+}
+
+@keyframes heroZoom {
+  0% {transform: scale(1.06);}
+  50% {transform: scale(1.12);}
+  100% {transform: scale(1.06);}
+}
+
