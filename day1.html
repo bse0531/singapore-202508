@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Day 1</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day1</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="index.html">✈️ Trip Diary</a>
+  <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
 </header>
 
 <nav class="tabbar">
@@ -21,51 +21,29 @@
 
 <main class="container">
 
-<section class="day-header">
-  <div class="day-nav">
-    <a class="btn outline" href="index.html">← Prev</a>
-    <a class="btn" href="day2.html">Next →</a>
-  </div>
-  <h1 class="display">Day 1</h1>
-  <p class="muted">날짜와 코스를 적어주세요.</p>
-</section>
+<div class="day-nav">
+  <a href="day3.html" class="arrow">←</a>
+  <a href="day2.html" class="arrow">→</a>
+</div>
+
+<h1 class="display">Day 1</h1>
 
 <section class="timeline card">
   <h2>타임라인</h2>
   <ol class="timeline-list">
-    <li><span class="time">09:00</span><div><strong>호텔 체크인</strong><br>메모 적기</div></li>
-    <li><span class="time">12:00</span><div><strong>현지 맛집</strong><br>무엇을 먹었는지</div></li>
-    <li><span class="time">18:30</span><div><strong>야경 산책</strong><br>느낀 점</div></li>
+    <li><span class="time">09:00</span> 내용</li>
+    <li><span class="time">12:00</span> 내용</li>
   </ol>
 </section>
 
-<section class="stack">
-  <div class="card">
-    <h2>사진</h2>
-    <div class="gallery grid small" id="day1Gallery" data-lightbox>
-      <img src="assets/sample1.jpg" alt="">
-      <img src="assets/sample2.jpg" alt="">
-      <img src="assets/sample3.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>오늘의 한 줄 소감</h2>
-    <p class="muted">여기에 한 줄 소감을 적어두세요. (HTML 편집)</p>
-  </div>
-</section>
-
 <section class="card">
-  <h2>관련 링크</h2>
-  <ul class="links">
-    <li><a href="#">식당 링크</a></li>
-    <li><a href="#">티켓/예약</a></li>
-  </ul>
+  <h2>오늘의 한 줄 소감</h2>
+  <p class="muted">여기에 적기</p>
 </section>
 
 </main>
 <footer class="site-footer">
-  <p>GM &amp; SE’s happy Singapore nature trip • 2025‑07‑29 ~ 08‑02</p>
+  <p>GM &amp; SE’s happy Singapore nature trip</p>
 </footer>
 <script src="app.js"></script>
 </body>
