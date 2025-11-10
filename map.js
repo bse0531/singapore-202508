@@ -1,1 +1,1 @@
-console.log('map');
+// not used; map initialized in app.js

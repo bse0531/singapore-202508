@@ -1,29 +1,33 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Day1</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Day 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
-</header>
+  <header class="site-header">
+    <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
+  </header>
 
-<nav class="tabbar">
-  <a href="index.html">Home</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="map.html">Map</a>
-  <a href="info.html">Info</a>
-</nav>
+  <nav class="tabbar">
+    <a href="index.html">Home</a>
+    <span class="sep"></span>
+    <a href="gallery.html">Gallery</a>
+    <span class="sep"></span>
+    <a href="map.html">Map</a>
+    <span class="sep"></span>
+    <a href="info.html">Info</a>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
 <div class="day-nav">
-  <a href="day3.html" class="arrow">←</a>
-  <a href="day2.html" class="arrow">→</a>
+  <a href="day3.html" class="arrow" aria-label="Previous">←</a>
+  <a href="day2.html" class="arrow" aria-label="Next">→</a>
 </div>
 
 <h1 class="display">Day 1</h1>
@@ -31,20 +35,23 @@
 <section class="timeline card">
   <h2>타임라인</h2>
   <ol class="timeline-list">
-    <li><span class="time">09:00</span> 내용</li>
-    <li><span class="time">12:00</span> 내용</li>
+    <li><span class="time">09:00</span><div>활동 내용</div></li>
+    <li><span class="time">12:00</span><div>활동 내용</div></li>
+    <li><span class="time">18:30</span><div>활동 내용</div></li>
   </ol>
 </section>
 
 <section class="card">
   <h2>오늘의 한 줄 소감</h2>
-  <p class="muted">여기에 적기</p>
+  <p class="muted">여기에 한 줄 소감을 적어두세요. (HTML 편집)</p>
 </section>
 
-</main>
-<footer class="site-footer">
-  <p>GM &amp; SE’s happy Singapore nature trip</p>
-</footer>
-<script src="app.js"></script>
+  </main>
+  <footer class="site-footer">
+    <p>GM &amp; SE’s happy Singapore nature trip</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
 </body>
 </html>

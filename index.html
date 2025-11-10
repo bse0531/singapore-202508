@@ -1,31 +1,35 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
-</header>
+  <header class="site-header">
+    <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
+  </header>
 
-<nav class="tabbar">
-  <a href="index.html">Home</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="map.html">Map</a>
-  <a href="info.html">Info</a>
-</nav>
+  <nav class="tabbar">
+    <a href="index.html">Home</a>
+    <span class="sep"></span>
+    <a href="gallery.html">Gallery</a>
+    <span class="sep"></span>
+    <a href="map.html">Map</a>
+    <span class="sep"></span>
+    <a href="info.html">Info</a>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
 <section class="hero-visual">
-  <div class="hero-slider">
-    <img src="assets/hero1.jpg">
-    <img src="assets/hero2.jpg">
-    <img src="assets/hero3.jpg">
+  <div class="hero-track">
+    <img src="assets/hero1.jpg" alt="Hero 1">
+    <img src="assets/hero2.jpg" alt="Hero 2">
+    <img src="assets/hero3.jpg" alt="Hero 3">
   </div>
   <div class="hero-overlay">
     <h1 class="display">우리의 싱가포르 여행</h1>
@@ -33,10 +37,28 @@
   </div>
 </section>
 
-</main>
-<footer class="site-footer">
-  <p>GM &amp; SE’s happy Singapore nature trip</p>
-</footer>
-<script src="app.js"></script>
+<section class="menu-grid">
+  <a class="menu-tile" href="index.html"><span>Home</span></a>
+  <a class="menu-tile" href="gallery.html"><span>Gallery</span></a>
+  <a class="menu-tile" href="map.html"><span>Map</span></a>
+  <a class="menu-tile" href="info.html"><span>Info</span></a>
+</section>
+
+<section class="cards">
+  <h2>Day by Day</h2>
+  <div class="grid">
+    <a class="card" href="day1.html"><h3>Day 1</h3><p>하이라이트 한 줄</p></a>
+    <a class="card" href="day2.html"><h3>Day 2</h3><p>하이라이트 한 줄</p></a>
+    <a class="card" href="day3.html"><h3>Day 3</h3><p>하이라이트 한 줄</p></a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <p>GM &amp; SE’s happy Singapore nature trip</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
 </body>
 </html>
