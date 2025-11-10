@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Info</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
@@ -14,20 +14,42 @@
   </header>
 
   <nav class="tabbar">
-    <a href="index.html">Home</a>
-    <span class="sep"></span>
-    <a href="gallery.html">Gallery</a>
-    <span class="sep"></span>
-    <a href="map.html">Map</a>
-    <span class="sep"></span>
+    <a href="index.html">Home</a><span class="sep"></span>
+    <a href="gallery.html">Gallery</a><span class="sep"></span>
+    <a href="map.html">Map</a><span class="sep"></span>
     <a href="info.html">Info</a>
   </nav>
 
   <main class="container">
 
-<section class="card">
-  <h1 class="display">About</h1>
-  <p>여행 정보 정리</p>
+<section class="section">
+  <h1 class="page-title">Info</h1>
+  <div class="stack">
+    <div class="card">
+      <h2 class="section-title">여행 개요</h2>
+      <ul class="kv">
+        <li><span>기간</span><b>2025-07-29 ~ 2025-08-02</b></li>
+        <li><span>항공</span><b>TR 897</b></li>
+        <li><span>숙소</span><b>Hotel Momentus Queenstown</b></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2 class="section-title">Must-Do</h2>
+      <ol class="mustdo">
+        <li>하이라이트 1</li>
+        <li>하이라이트 2</li>
+        <li>하이라이트 3</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2 class="section-title">Packing</h2>
+      <ul class="checklist">
+        <li>여권</li>
+        <li>eSIM</li>
+        <li>상비약</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
   </main>

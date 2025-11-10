@@ -4,24 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-
-  <!-- Open Graph -->
-<meta property="og:title" content="🇸🇬 Trip Diary">
-<meta property="og:description" content="GM & SE’s happy Singapore nature trip">
-<meta property="og:image" content="https://bse0531.github.io/singapore-202508/assets/thumbnail.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="🇸🇬 Trip Diary">
-<meta name="twitter:description" content="GM & SE’s happy Singapore nature trip">
-<meta name="twitter:image" content="https://bse0531.github.io/singapore-202508/assets/thumbnail.jpg">
-
 </head>
 <body>
   <header class="site-header">
@@ -29,34 +14,30 @@
   </header>
 
   <nav class="tabbar">
-    <a href="index.html">Home</a>
-    <span class="sep"></span>
-    <a href="gallery.html">Gallery</a>
-    <span class="sep"></span>
-    <a href="map.html">Map</a>
-    <span class="sep"></span>
+    <a href="index.html">Home</a><span class="sep"></span>
+    <a href="gallery.html">Gallery</a><span class="sep"></span>
+    <a href="map.html">Map</a><span class="sep"></span>
     <a href="info.html">Info</a>
   </nav>
 
   <main class="container">
 
-<!-- ✅ container 밖으로! 화면 전체 폭 hero -->
-<section class="hero-full">
+<!-- Full-bleed hero (no overlay text) -->
+<section class="hero-visual" aria-label="Trip highlights">
   <div class="hero-track">
-    <img src="assets/hero1.jpg">
-    <img src="assets/hero2.jpg">
-    <img src="assets/hero3.jpg">
+    <img src="assets/hero1.jpg" alt="">
+    <img src="assets/hero2.jpg" alt="">
+    <img src="assets/hero3.jpg" alt="">
   </div>
 </section>
 
-
-<section class="cards">
-  <h2>Day by Day</h2>
-  <div class="grid">
-    <a class="card" href="day1.html"><h3>Day 1</h3><p>하이라이트 한 줄</p></a>
-    <a class="card" href="day2.html"><h3>Day 2</h3><p>하이라이트 한 줄</p></a>
-    <a class="card" href="day3.html"><h3>Day 3</h3><p>하이라이트 한 줄</p></a>
-  </div>
+<section class="section">
+  <h2 class="section-title">Day by Day</h2>
+  <ul class="day-list">
+    <li><a href="day1.html">Day 1</a></li>
+    <li><a href="day2.html">Day 2</a></li>
+    <li><a href="day3.html">Day 3</a></li>
+  </ul>
 </section>
 
   </main>

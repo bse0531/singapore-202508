@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
@@ -14,23 +14,20 @@
   </header>
 
   <nav class="tabbar">
-    <a href="index.html">Home</a>
-    <span class="sep"></span>
-    <a href="gallery.html">Gallery</a>
-    <span class="sep"></span>
-    <a href="map.html">Map</a>
-    <span class="sep"></span>
+    <a href="index.html">Home</a><span class="sep"></span>
+    <a href="gallery.html">Gallery</a><span class="sep"></span>
+    <a href="map.html">Map</a><span class="sep"></span>
     <a href="info.html">Info</a>
   </nav>
 
   <main class="container">
 
-<section>
-  <h1 class="display">Gallery</h1>
-  <div id="galleryGrid" class="gallery grid">
-    <img src="assets/sample1.jpg" alt="">
-    <img src="assets/sample2.jpg" alt="">
-    <img src="assets/sample3.jpg" alt="">
+<section class="section">
+  <h1 class="page-title">Gallery</h1>
+  <div id="galleryGrid" class="gallery grid" data-lightbox>
+    <img src="assets/thumb1.jpg" alt="">
+    <img src="assets/thumb2.jpg" alt="">
+    <img src="assets/thumb3.jpg" alt="">
   </div>
 </section>
 
