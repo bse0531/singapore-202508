@@ -1,15 +1,16 @@
 
+
 :root{
-  --bg:#0b0f0c;        /* deep forest */
-  --fg:#e9efe9;        /* soft mist */
-  --muted:#a1b2a5;
-  --card:#121612;
-  --brand:#1b5e20;     /* dark green primary */
-  --accent:#ff8c00;    /* orange point */
-  --ink-on-brand:#dbf5df;
-  --ink-on-accent:#1b1b1b;
-  --border: color-mix(in oklab, var(--fg), transparent 86%);
+  --bg:#ffffff;
+  --fg:#1a1e1b;
+  --muted:#6e7a71;
+  --card:#f5faf6;
+  --brand:#34c759;   /* brighter green */
+  --accent:#ff8c00;
+  --ink-on-brand:#ffffff;
+  --border: rgba(0,0,0,0.1);
 }
+
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
@@ -58,3 +59,16 @@ a{color:var(--accent);text-decoration:none}
 .mapbox{height:60vh;border-radius:16px;border:1px solid var(--border)}
 
 /* No :hover styles */
+
+
+/* Center header brand */
+.site-header{
+  justify-content:center !important;
+}
+
+
+/* Active tab highlight */
+.tabbar a.active{
+  background: var(--brand);
+  color: var(--ink-on-brand);
+}
