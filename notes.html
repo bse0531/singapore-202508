@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">✈️ Trip Diary</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="map.html">Map</a>
+    <a href="notes.html">Notes</a>
+    <a href="info.html">Info</a>
+  </nav>
+  <button id="themeToggle" class="btn small" aria-label="Toggle theme">🌓</button>
+</header>
+<main class="container">
+
+<section>
+  <h1 class="display">Memory Notes</h1>
+  <p class="muted">여행 중 떠오른 생각, 배운 점, 다음 여행 팁을 메모로 남겨요. (브라우저에만 저장)</p>
+
+  <form id="noteForm" class="note-form">
+    <input id="noteTitle" placeholder="제목" required>
+    <textarea id="noteBody" placeholder="내용" required></textarea>
+    <button class="btn" type="submit">추가</button>
+  </form>
+
+  <div id="notesList" class="notes-list"></div>
+</section>
+<script src="notes.js"></script>
+
+</main>
+<footer class="site-footer">
+  <p>Made with love & memories • © 2025</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Day 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">✈️ Trip Diary</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="map.html">Map</a>
+    <a href="notes.html">Notes</a>
+    <a href="info.html">Info</a>
+  </nav>
+  <button id="themeToggle" class="btn small" aria-label="Toggle theme">🌓</button>
+</header>
+<main class="container">
+
+<section class="day-header">
+  <h1 class="display">Day 1</h1>
+  <p class="muted">여행 날짜와 코스를 적어주세요. 예) 2025-07-29 / 공항 → 호텔 → 카페</p>
+</section>
+
+<section class="timeline">
+  <h2>타임라인</h2>
+  <ol class="timeline-list">
+    <li><span class="time">09:00</span><div><strong>호텔 체크인</strong><br>간단한 메모를 적어주세요.</div></li>
+    <li><span class="time">12:00</span><div><strong>현지 맛집</strong><br>무엇을 먹었는지, 맛은 어땠는지.</div></li>
+    <li><span class="time">18:30</span><div><strong>야경 산책</strong><br>느낀 점, 분위기.</div></li>
+  </ol>
+</section>
+
+<section class="two-col">
+  <div>
+    <h2>사진 몇 장</h2>
+    <div class="gallery grid small" data-lightbox>
+      <img src="assets/sample1.jpg" alt="sample" loading="lazy">
+      <img src="assets/sample2.jpg" alt="sample" loading="lazy">
+      <img src="assets/sample3.jpg" alt="sample" loading="lazy">
+    </div>
+  </div>
+  <div>
+    <h2>짧은 메모</h2>
+    <textarea class="note" placeholder="오늘의 한 줄 소감"></textarea>
+  </div>
+</section>
+
+<section>
+  <h2>관련 링크</h2>
+  <ul class="links">
+    <li><a href="#" target="_blank" rel="noopener">식당 링크</a></li>
+    <li><a href="#" target="_blank" rel="noopener">티켓/예약</a></li>
+  </ul>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>Made with love & memories • © 2025</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
