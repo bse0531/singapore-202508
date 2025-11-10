@@ -1,53 +1,68 @@
 
+/* Mobile‑first, green + orange theme */
 :root{
-  --bg:#0b0b0c; --fg:#e9eaee; --muted:#a0a3ad; --card:#141417; --brand:#6dd3ff; --accent:#ffd76d;
+  --bg:#0b0f0c;
+  --fg:#e9f1ea;
+  --muted:#a5b5a7;
+  --card:#121612;
+  --brand:#2e7d32;       /* green 700 */
+  --brand-ink:#b9e3bd;   /* light text on brand */
+  --accent:#ff8c00;      /* orange */
+  --border: color-mix(in oklab, var(--fg), transparent 88%);
 }
+
 @media (prefers-color-scheme: light){
-  :root{ --bg:#ffffff; --fg:#101114; --muted:#5a5f6a; --card:#f5f7fb; --brand:#0066ff; --accent:#ff8c00; }
+  :root{
+    --bg:#ffffff; --fg:#111311; --muted:#5b6a5d; --card:#f5faf6;
+    --brand:#1b5e20; --brand-ink:#ffffff; --accent:#ff8c00;
+    --border: color-mix(in oklab, var(--fg), transparent 88%);
+  }
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg);}
-img{max-width:100%;border-radius:12px;display:block}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block;border-radius:12px}
 a{color:var(--brand);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-.display{font-family:"Playfair Display",serif; font-size:clamp(28px,5vw,44px); margin:0 0 8px}
-.lead{font-size:1.1rem;opacity:.9}
+.container{max-width:860px;margin:0 auto;padding:16px}
+
+.display{font-family:"Playfair Display",serif;font-size:clamp(24px,6vw,36px);margin:0 0 8px}
+.lead{font-size:1rem;opacity:.9}
 .muted{color:var(--muted)}
-.site-header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.2) blur(8px);background:color-mix(in oklab, var(--bg), transparent 20%);display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid color-mix(in oklab,var(--fg),transparent 90%)}
-.brand{font-weight:700}
-.nav a{margin:0 8px}
-.btn{background:var(--brand);color:#fff;border:none;padding:10px 14px;border-radius:999px;font-weight:700;cursor:pointer;display:inline-block}
+
+.site-header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 12px;background:color-mix(in oklab, var(--bg), transparent 10%);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border)}
+.brand{font-weight:800;color:var(--brand)}
+
+.tabbar{position:sticky;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:color-mix(in oklab, var(--bg), white 5%);border-top:1px solid var(--border)}
+.tabbar a{display:block;text-align:center;padding:12px 6px;font-weight:700;color:inherit}
+.tabbar a:hover{background:color-mix(in oklab, var(--bg), white 6%)}
+
+.btn{background:var(--brand);color:var(--brand-ink);border:none;padding:12px 16px;border-radius:14px;font-weight:800;display:inline-block}
 .btn.outline{background:transparent;color:var(--brand);border:2px solid var(--brand)}
-.btn.small{font-size:.9rem;padding:8px 10px}
-.site-footer{padding:40px 16px;color:var(--muted);text-align:center;border-top:1px solid color-mix(in oklab,var(--fg),transparent 90%)}
+.btn.small{font-size:.95rem;padding:8px 10px}
 
-.hero{padding:48px 0 24px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.site-footer{padding:28px 12px;color:var(--muted);text-align:center;border-top:1px solid var(--border)}
 
-.cards h2{margin-top:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--card);padding:16px;border-radius:16px;border:1px solid color-mix(in oklab,var(--fg),transparent 85%);color:inherit}
+.hero{padding:24px 0 12px}
+.cta-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px}
+
+.cards h2{margin:20px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:680px){ .grid{grid-template-columns:repeat(3,1fr)} }
+.card{background:var(--card);padding:14px;border-radius:16px;border:1px solid var(--border);color:inherit}
 .card:hover{transform:translateY(-2px)}
 
-.timeline-list{list-style:none;padding:0;margin:0;border-left:2px dashed color-mix(in oklab,var(--fg),transparent 80%);padding-left:18px}
-.timeline-list li{margin:14px 0;position:relative}
-.timeline-list .time{font-weight:700;margin-right:8px}
-.timeline-list li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);position:absolute;left:-6px;top:.4rem}
+.stack{display:grid;gap:14px}
+.timeline{border:1px solid var(--border);}
+.timeline-list{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px dashed color-mix(in oklab,var(--fg),transparent 78%)}
+.timeline-list li{margin:12px 0;position:relative}
+.timeline-list .time{font-weight:800;margin-right:8px}
+.timeline-list li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);position:absolute;left:-6px;top:.45rem}
 
-.two-col{display:grid;grid-template-columns:2fr 1fr;gap:20px}
-@media (max-width:860px){ .two-col{grid-template-columns:1fr} }
+.gallery.grid{grid-template-columns:repeat(3, 1fr);gap:8px}
+.gallery.grid.small{grid-template-columns:repeat(3, 1fr)}
+@media (min-width:760px){ .gallery.grid{grid-template-columns:repeat(4,1fr)} }
 
-.gallery.grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.gallery.grid.small{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
-.note{width:100%;min-height:140px;background:var(--card);color:inherit;border:1px solid color-mix(in oklab,var(--fg),transparent 85%);border-radius:12px;padding:12px}
+.note{width:100%;min-height:120px;background:var(--card);color:inherit;border:1px solid var(--border);border-radius:12px;padding:10px}
 
-.note-form{display:grid;gap:10px;margin:10px 0 20px}
-.note-form input, .note-form textarea{background:var(--card);color:inherit;border:1px solid color-mix(in oklab,var(--fg),transparent 85%);border-radius:12px;padding:10px}
-.notes-list{display:grid;gap:12px}
-.note-item{background:var(--card);padding:12px;border-radius:12px;border:1px solid color-mix(in oklab,var(--fg),transparent 85%);}
 .links{line-height:1.9}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{border-bottom:1px solid color-mix(in oklab,var(--fg),transparent 88%);padding:8px 6px;text-align:left}
-.mustdo{padding-left:18px}
-.checklist{list-style:none;padding-left:0}
-.checklist li{margin:6px 0}
+.mapbox{height:60vh;border-radius:16px;border:1px solid var(--border)}

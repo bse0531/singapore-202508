@@ -1,5 +1,5 @@
 
-// Theme toggle (persists)
+// Theme toggle (persist)
 const btn = document.getElementById('themeToggle');
 if (btn){
   const key = 'theme';
@@ -8,17 +8,15 @@ if (btn){
   if (saved) apply(saved);
   btn.addEventListener('click', ()=>{
     const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    apply(cur);
-    localStorage.setItem(key, cur);
+    apply(cur); localStorage.setItem(key, cur);
   });
-  // Default to system preference if nothing saved
   if (!saved) {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     apply(prefersDark ? 'dark' : 'light');
   }
 }
 
-// Simple lightbox for any [data-lightbox] container
+// Lightweight lightbox
 document.addEventListener('click', (e)=>{
   const img = e.target.closest('[data-lightbox] img');
   if(!img) return;

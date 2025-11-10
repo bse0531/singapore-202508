@@ -6,33 +6,34 @@
   <title>Gallery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
   <a class="brand" href="index.html">✈️ Trip Diary</a>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="map.html">Map</a>
-    <a href="notes.html">Notes</a>
-    <a href="info.html">Info</a>
-  </nav>
   <button id="themeToggle" class="btn small" aria-label="Toggle theme">🌓</button>
 </header>
+
+<nav class="tabbar">
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="map.html">Map</a>
+  <a href="info.html">Info</a>
+</nav>
+
 <main class="container">
 
 <section>
   <h1 class="display">Gallery</h1>
-  <p class="muted">assets 폴더에 이미지를 넣으면 자동으로 표시됩니다.</p>
+  <p class="muted">assets 폴더에 이미지를 넣으면 표시됩니다.</p>
   <div id="galleryGrid" class="gallery grid" data-lightbox></div>
 </section>
 <script src="gallery.js"></script>
 
 </main>
 <footer class="site-footer">
-  <p>Made with love & memories • © 2025</p>
+  <p>Made with love • © 2025</p>
 </footer>
 <script src="app.js"></script>
 </body>
