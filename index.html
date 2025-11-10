@@ -13,39 +13,54 @@
     <a class="brand" href="index.html">🇸🇬 Trip Diary</a>
   </header>
 
+<!-- 상단 탭 -->
   <nav class="tabbar">
-    <a href="index.html">Home</a><span class="sep"></span>
+    <a class="active" href="index.html">Home</a><span class="sep"></span>
     <a href="gallery.html">Gallery</a><span class="sep"></span>
     <a href="map.html">Map</a><span class="sep"></span>
-    <a href="info.html">Info</a>
+    <a href="#" onclick="return false;" aria-disabled="true" class="disabled">Info</a>
   </nav>
 
+  <!-- 풀블리드 Hero (문구 없음) -->
+  <section class="hero-visual" aria-label="Trip highlights">
+    <div class="hero-track">
+      <img src="assets/hero1.jpg" alt="">
+      <img src="assets/hero2.jpg" alt="">
+      <img src="assets/hero3.jpg" alt="">
+    </div>
+  </section>
+
   <main class="container">
+    <!-- Day by Day -->
+    <section class="section">
+      <h2 class="section-title">Day by Day</h2>
+      <ul class="day-list">
+        <li><a href="day1.html">Day 1</a></li>
+        <li><a href="day2.html">Day 2</a></li>
+        <li><a href="day3.html">Day 3</a></li>
+      </ul>
+    </section>
 
-<!-- Full-bleed hero (no overlay text) -->
-<section class="hero-visual" aria-label="Trip highlights">
-  <div class="hero-track">
-    <img src="assets/hero1.jpg" alt="">
-    <img src="assets/hero2.jpg" alt="">
-    <img src="assets/hero3.jpg" alt="">
-  </div>
-</section>
 
-<section class="section">
-  <h2 class="section-title">Day by Day</h2>
-  <ul class="day-list">
-    <li><a href="day1.html">Day 1</a></li>
-    <li><a href="day2.html">Day 2</a></li>
-    <li><a href="day3.html">Day 3</a></li>
-  </ul>
-</section>
-
+    <!-- Info(여행 개요) — Home로 이동 -->
+    <section class="section">
+      <h1 class="page-title">Info</h1>
+      <div class="stack">
+        <div class="card">
+          <h2 class="section-title">여행 개요</h2>
+          <ul class="kv">
+            <li><span>기간</span><b>2025-07-29 ~ 2025-08-02</b></li>
+            <li><span>항공</span><b>TR 897</b></li>
+            <li><span>숙소</span><b>Hotel Momentus Queenstown</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- 푸터 -->
   <footer class="site-footer">
     <p>GM &amp; SE’s happy Singapore nature trip</p>
   </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="app.js"></script>
 </body>
 </html>
